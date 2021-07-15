@@ -1,0 +1,53 @@
+# Connection section
+connection:
+  mysql:
+    enabled: false
+    address: "localhost:3306"
+    username: "root"
+    password: ""
+    database: "minecraft"
+  sqlite:
+    file: "users.db"
+
+settings:
+  # Crates Settings:
+  crates:
+    max-per-day: 3
+    max-rewards: 30
+    open-delay: 120 # (in seconds)
+
+Messages:
+  Command:
+    Player-Not-Found: "&cPlayer not found."
+    Player-Only: "&cOnly players can use this command."
+    No-Permission: "&cYou don't have access to this command!"
+    Invalid-Syntax: "&cInvalid Syntax. Use /crate {usage}"
+  Open:
+    On-delay: "&cYou need to wait a while to open another crate."
+    Max-by-day: "&cYou can no longer open crates today"
+    On-quit: "&cYou closed the menu, so you lost your reward"
+    On-cancel: "&cAction cancelled."
+    On-finish: "&aYou won a &f{item_name}&a with &f{item_chance}%"
+  Create:
+    Already-exist: "&cThere is already a crate with that name."
+    Invalid-item: "&cYou must have a valid item in your hand."
+    On-confirm: "&aCrate successfully created!"
+    On-cancel: "&cCrate creation has been canceled."
+  Delete:
+    On-confirm: "&cCrate successfully removed!"
+    On-cancel: "&cCrate deletion has been canceled."
+  Edit:
+    Crate-not-found: "&cCrate not found."
+    Chance-prompt: "&aEnter the new percentage chance of this reward:"
+    Invalid-chance: "&cChance is invalid, you must to enter a value between 0 and 100."
+    On-change: "&aChance changed to: &f{chance}%"
+    Rewards:
+      Already-exist: "&cThere is already a similar reward in this crate"
+      Reach-max: "&cThis crate reached the max rewards per crate."
+      Added: "&aReward successfully added."
+      Remove: "&cReward successfully removed."
+  Give:
+    Crate-not-found: "&cCrate not found."
+    Invalid-amount: "&cYou must enter a valid amount"
+    Sender: "&aYou sent x{amount} crates of {crate} to {player}"
+    Target: "&aYou received x{amount} crates of {crate}"

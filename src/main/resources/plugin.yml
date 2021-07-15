@@ -1,0 +1,9 @@
+name: SeniorCrates
+version: ${project.version}
+main: com.jaoow.crates.Crates
+authors: [ Jaoow ]
+
+commands:
+  crates:
+    aliases: [crate, box]
+    description: "Main crates command"
